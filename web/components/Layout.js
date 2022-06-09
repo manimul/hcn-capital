@@ -22,9 +22,9 @@ function Layout(props) {
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover" />
       </Head>
-      <div className="container">
+      <div className="containerOriginal">
         <Header title={title} navItems={mainNavigation} logo={logo} />
-        <div className="content">{children}</div>
+        <div className="-mt-24  content">{children}</div>
         <Footer navItems={footerNavigation} text={footerText} />
         {logoUrl && url && <LogoJsonLd url={url} logo={logoUrl} />}
       </div>

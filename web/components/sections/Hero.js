@@ -20,9 +20,9 @@ function Hero(props) {
     : {}
 
   return (
-    <div className={styles.root} style={style}>
-      <div className={styles.content}>
-        <h1 className={styles.title}>{heading}</h1>
+    <div className={`${styles.root}`} style={style}>
+      <div className={`min-h-screen  p-4 md:max-w-5xl mx-auto z-10 {styles.content}`}>
+        <h1 className="pt-32 md:pt-64 text-4xl md:w-2/3 md:text-6xl font-serif   ">{heading}</h1>
         <div className={styles.tagline}>{tagline && <SimpleBlockContent blocks={tagline} />}</div>
         {ctas && (
           <div className={styles.ctas}>

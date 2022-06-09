@@ -8,9 +8,9 @@ function TextSection(props) {
 
   return (
     <div className={styles.root}>
-      <section className={styles.article}>
+      <section className="md:max-w-xl p-6 mx-auto space-y-4">
         <div className={styles.label}>{label}</div>
-        <h2 className={styles.heading}>{heading}</h2>
+        <h2 className={`text-3xl font-serif {styles.heading}`}>{heading}</h2>
         {text && <SimpleBlockContent blocks={text} />}
       </section>
     </div>

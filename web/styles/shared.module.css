@@ -1,4 +1,4 @@
-@import "./custom-media.css";
+@import './custom-media.css';
 
 .center {
   display: flex;
@@ -6,7 +6,7 @@
   align-items: flex-start;
 }
 
-.container {
+.containerOriginal {
   margin: 0 1rem;
 
   @media (--typography-breakpoint) {
@@ -16,7 +16,7 @@
 }
 
 .normal-container {
-  composes: container;
+  composes: containerOriginal;
 
   @media (--typography-breakpoint) {
     max-width: var(--wide-container, 60rem);
@@ -24,7 +24,7 @@
 }
 
 .narrow-container {
-  composes: container;
+  composes: containerOriginal;
 
   @media (--typography-breakpoint) {
     max-width: var(--narrow-container, 30rem);

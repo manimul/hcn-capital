@@ -3,6 +3,8 @@ import BaseApp from 'next/app'
 import client from '../client'
 import '../styles/shared.module.css'
 import '../styles/layout.css'
+import '../styles/global.css'
+
 import '../styles/custom-properties.css'
 
 const siteConfigQuery = `

@@ -9,7 +9,7 @@ import Cta from '../Cta'
 const builder = imageUrlBuilder(client)
 
 function ImageSection(props) {
-  const {heading, label, text, image, cta} = props
+  const {heading, alt, label, text, popout, image, cta} = props
 
   if (!image) {
     return null
@@ -17,23 +17,34 @@ function ImageSection(props) {
 
   return (
     <div className={styles.root}>
-      <figure className={styles.content}>
-        <img
-          src={builder.image(image).auto('format').width(2000).url()}
-          className={styles.image}
-          alt={heading}
-        />
-        <figcaption>
-          <div className={styles.caption}>
-            <div className={styles.captionBox}>
-              <div className={styles.label}>{label}</div>
-              <h2 className={styles.title}>{heading}</h2>
-              {text && <SimpleBlockContent blocks={text} />}
-              {cta && cta.route && <Cta {...cta} />}
+      <section
+        className={`container mx-auto flex flex-col  ${
+          alt ? 'md:flex-row-reverse	' : 'md:flex-row '
+        }`}
+      >
+        <div className="md:w-1/2 ">
+          <img
+            src={builder.image(image).auto('format').width(2000).url()}
+            className={`${styles.image}`}
+            alt={heading}
+          />
+        </div>
+        <div className="md:w-1/2 p-12 flex-col  space-y-4">
+          <div className="text-xs uppercase  ">{label}</div>
+          <h2 className="text-3xl font-serif">{heading}</h2>
+          {text && <SimpleBlockContent blocks={text} />}
+          {popout && (
+            <div
+              className={`p-12 font-extrabold   ${alt ? 'md:-mr-32 	' : 'md:-ml-32 '}  ${
+                styles.lightGradient
+              }`}
+            >
+              <SimpleBlockContent blocks={popout} />{' '}
             </div>
-          </div>
-        </figcaption>
-      </figure>
+          )}
+          {cta && cta.route && <Cta {...cta} />}
+        </div>
+      </section>
     </div>
   )
 }
@@ -41,7 +52,10 @@ function ImageSection(props) {
 ImageSection.propTypes = {
   heading: PropTypes.string,
   label: PropTypes.string,
+  alt: PropTypes.boolean,
   text: PropTypes.array,
+  popout: PropTypes.array,
+
   image: PropTypes.shape({
     asset: PropTypes.shape({
       _ref: PropTypes.string,

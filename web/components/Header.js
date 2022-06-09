@@ -71,13 +71,13 @@ class Header extends Component {
     const {showNav} = this.state
 
     return (
-      <div className={styles.root} data-show-nav={showNav}>
-        <h1 className={styles.branding}>
+      <div className={`z-20 w-screen mx-auto  ${styles.root}`} data-show-nav={showNav}>
+        <h1 className={` text-white  ${styles.branding}`}>
           <Link href={'/'}>
             <a title={title}>{this.renderLogo(logo)}</a>
           </Link>
         </h1>
-        <nav className={styles.nav}>
+        <nav className={`font-serif text-white ${styles.nav}`}>
           <ul className={styles.navItems}>
             {navItems &&
               navItems.map((item) => {
