@@ -4,10 +4,10 @@ import {NextSeo} from 'next-seo'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import client from '../client'
-import Layout from '../components/Layout'
-import RenderSections from '../components/RenderSections'
-import {getSlugVariations, slugParamToPath} from '../utils/urls'
+import client from '../../client'
+import Layout from '../../components/Layout'
+import RenderSections from '../../components/RenderSections'
+import {getSlugVariations, slugParamToPath} from '../../utils/urls'
 
 const pageFragment = groq`
 
@@ -26,10 +26,6 @@ content[] {
     ...,
   },
   newsPosts[] ->{
-    ...,
-  },
-  
-  teamMembers[] ->{
     ...,
   },
 }`

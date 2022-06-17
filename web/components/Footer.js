@@ -14,7 +14,7 @@ function Footer(props) {
         <div className="max-w-5xl  mx-auto flex  flex-col pt-32 pb-12 px-12 md:flex-row md:py-32 text-white md:space-x-16 ">
           <div className="md:w-1/2 space-y-4">
             {' '}
-            <h2 className="text-sm uppercase text-[#81A3BA]">Contact Us</h2>
+            <h2 className="text-sm uppercase text-[#E8B127]">Contact Us</h2>
             <h3 className="text-4xl text-white font-serif">Get in touch today </h3>
             <p className="">
               Do you have a business case you’d like to share, get in touch – it might be a perfect
@@ -23,7 +23,7 @@ function Footer(props) {
             <div className="flex space-x-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="text-[#60AAB5] h-6 w-6"
+                className="text-[#E8B127] h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -36,14 +36,14 @@ function Footer(props) {
                 />
               </svg>
               <div>
-                <span className="text-[#81A3BA] text-md font-serif  block">Telephone</span>
+                <span className="text-[#E8B127] text-md font-serif  block">Telephone</span>
                 <a>01 23 456 789</a>
               </div>
             </div>
             <div className="flex space-x-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="text-[#60AAB5] h-6 w-6"
+                className="text-[#E8B127] h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -56,7 +56,7 @@ function Footer(props) {
                 />
               </svg>{' '}
               <div>
-                <span className="text-[#81A3BA] text-md font-serif  block">Email</span>
+                <span className="text-[#E8B127] text-md font-serif  block">Email</span>
                 <a className="underline" href="mailto:info@hcncapital.se">
                   hello@hcncapital.se
                 </a>
@@ -65,7 +65,7 @@ function Footer(props) {
             <div className="flex space-x-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="text-[#60AAB5] h-6 w-6"
+                className="text-[#E8B127] h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -83,7 +83,7 @@ function Footer(props) {
                 />
               </svg>
               <div>
-                <span className="text-[#81A3BA] text-md font-serif  block">Address</span>
+                <span className="text-[#E8B127] text-md font-serif  block">Address</span>
                 <a>Basunvägen 4 SE-237 42 Borgeby, Sweden</a>
               </div>
             </div>
@@ -127,7 +127,7 @@ function Footer(props) {
                   name="message"
                   className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500  "
                 ></textarea>
-                <button className="mt-8 text-white  bg-none border-2 bg-cyan-700  border-cyan-700  py-5 rounded-lg inline-block tracking-wide font-serif font-semibold ">
+                <button className="mt-8 text-white  bg-none border-2 bg-[#E8B127]  border-[#E8B127]  py-5 rounded-lg inline-block tracking-wide font-serif font-semibold ">
                   Send message
                 </button>
               </fieldset>

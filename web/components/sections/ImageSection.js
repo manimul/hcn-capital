@@ -9,7 +9,7 @@ import Cta from '../Cta'
 const builder = imageUrlBuilder(client)
 
 function ImageSection(props) {
-  const {heading, alt, label, text, popout, image, cta} = props
+  const {heading, alt, label, text, popout, image, cta, layout} = props
 
   if (!image) {
     return null
@@ -18,8 +18,8 @@ function ImageSection(props) {
   return (
     <div className={styles.root}>
       <section
-        className={`container mx-auto flex flex-col  ${
-          alt ? 'md:flex-row-reverse	' : 'md:flex-row '
+        className={`container mx-auto flex flex-col font-serif  ${
+          layout ? 'md:flex-row-reverse	' : 'md:flex-row '
         }`}
       >
         <div className="md:w-1/2 ">
@@ -32,16 +32,8 @@ function ImageSection(props) {
         <div className="md:w-1/2 p-12 flex-col  space-y-4">
           <div className="text-xs uppercase  ">{label}</div>
           <h2 className="text-3xl font-serif">{heading}</h2>
-          {text && <SimpleBlockContent blocks={text} />}
-          {popout && (
-            <div
-              className={`p-12 font-extrabold   ${alt ? 'md:-mr-32 	' : 'md:-ml-32 '}  ${
-                styles.lightGradient
-              }`}
-            >
-              <SimpleBlockContent blocks={popout} />{' '}
-            </div>
-          )}
+          {text && <SimpleBlockContent className="font-serif" blocks={text} />}
+
           {cta && cta.route && <Cta {...cta} />}
         </div>
       </section>
@@ -55,6 +47,7 @@ ImageSection.propTypes = {
   alt: PropTypes.boolean,
   text: PropTypes.array,
   popout: PropTypes.array,
+  layout: PropTypes.boolean,
 
   image: PropTypes.shape({
     asset: PropTypes.shape({

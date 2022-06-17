@@ -1,4 +1,4 @@
-@import "../../styles/custom-media.css";
+@import '../../styles/custom-media.css';
 
 .root {
   padding: 2rem 0;
@@ -21,7 +21,6 @@
   line-height: var(--font-micro-line-height);
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-top: 1em;
 }
 
 .heading {

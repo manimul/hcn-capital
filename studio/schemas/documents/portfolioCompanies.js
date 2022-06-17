@@ -1,9 +1,9 @@
 import { MasterDetailIcon } from '@sanity/icons'
 
 export default {
-  name: 'page',
+  name: 'portfolioCompanies',
   type: 'document',
-  title: 'Page',
+  title: 'Portfolio Companies',
   icon: MasterDetailIcon,
   fieldsets: [
     {
@@ -18,6 +18,31 @@ export default {
       title: 'Title'
     },
     {
+      name: 'slug',
+      type: 'slug',
+      title: 'Slug',
+      description: 'Some frontends will require a slug to be set to be able to show the post',
+      options: {
+        source: 'title',
+        maxLength: 96
+      }
+    },
+    {
+      name: 'image',
+      type: 'figure',
+      title: 'Image'
+    },
+    {
+      name: 'logo',
+      type: 'figure',
+      title: 'Logo'
+    },
+    {
+      name: 'text',
+      type: 'portableText',
+      title: 'Text'
+    },
+    {
       name: 'content',
       type: 'array',
       title: 'Page sections',
@@ -25,10 +50,7 @@ export default {
         { type: 'hero' },
         { type: 'imageSection' },
         { type: 'mailchimp' },
-        { type: 'textSection' },
-        { type: 'teamSection' },
-        { type: 'portfolioSection' },
-        { type: 'newsSection' }
+        { type: 'textSection' }
       ]
     },
     {

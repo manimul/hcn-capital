@@ -14,6 +14,7 @@ function SimpleBlockContent(props) {
 
   return (
     <PortableText
+      className="text-serif"
       value={blocks}
       components={{
         types: {

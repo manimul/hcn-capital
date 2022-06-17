@@ -21,16 +21,20 @@ function Hero(props) {
 
   return (
     <div className={`${styles.root}`} style={style}>
-      <div className={`min-h-screen  p-4 md:max-w-5xl mx-auto z-10 {styles.content}`}>
-        <h1 className="pt-32 md:pt-64 text-4xl md:w-2/3 md:text-6xl font-serif   ">{heading}</h1>
-        <div className={styles.tagline}>{tagline && <SimpleBlockContent blocks={tagline} />}</div>
-        {ctas && (
-          <div className={styles.ctas}>
-            {ctas.map((cta) => (
-              <Cta {...cta} key={cta._key} />
-            ))}
+      <div className={`min-h-screen   p-4 md:max-w-5xl mx-auto z-10 `}>
+        <div className="flex items-center bg-black bg-opacity-10 backdrop-blur-2xl px-10 py-20 justify-center mt-48 ">
+          <h1 className="  text-3xl md:w-3/4  md:text-5xl font-serif   ">{heading}</h1>
+          <div className={`w-2/4 font-thin  text-base ${styles.tagline}`}>
+            {tagline && <SimpleBlockContent blocks={tagline} />}
+            {ctas && (
+              <div className={styles.ctas}>
+                {ctas.map((cta) => (
+                  <Cta {...cta} key={cta._key} />
+                ))}
+              </div>
+            )}
           </div>
-        )}
+        </div>
       </div>
     </div>
   )

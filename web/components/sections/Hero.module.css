@@ -1,7 +1,7 @@
-@import "../../styles/custom-media.css";
+@import '../../styles/custom-media.css';
 
 .root {
-  composes: center from "../../styles/shared.module.css";
+  composes: center from '../../styles/shared.module.css';
   position: relative;
   background-color: var(--color-black, #000);
   color: var(--color-white, #fff);
@@ -16,7 +16,7 @@
 }
 
 .root::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   left: 0;
@@ -57,10 +57,8 @@
   padding: 0;
   margin-top: 0.5em;
   margin-bottom: 1rem;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
 
   @media (--media-min-medium) {
-    font-size: var(--font-large-size);
     line-height: var(--font-large-line-height);
   }
 }
