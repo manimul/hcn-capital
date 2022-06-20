@@ -1,7 +1,11 @@
+import { UsersIcon } from '@sanity/icons'
+
 export default {
   type: 'object',
   name: 'teamSection',
   title: 'Team Section',
+  icon: UsersIcon,
+
   fields: [
     {
       name: 'label',
@@ -30,6 +34,19 @@ export default {
       title: 'Linkedin'
     },
     {
+      name: 'teamMembers',
+      type: 'array',
+      title: 'Team Members',
+      of: [
+        {
+          type: 'reference',
+          to: {
+            type: 'teamMember'
+          }
+        }
+      ]
+    },
+    {
       name: 'cta',
       type: 'cta',
       title: 'Call to action'
@@ -38,6 +55,12 @@ export default {
   preview: {
     select: {
       heading: 'heading'
+    },
+    prepare({ heading }) {
+      return {
+        title: `${heading}`,
+        subtitle: 'Team Member Section'
+      }
     }
   }
 }

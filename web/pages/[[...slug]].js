@@ -124,7 +124,7 @@ const LandingPage = (props) => {
     : []
 
   return (
-    <Layout config={config}>
+    <Layout config={config} title={title}>
       <NextSeo
         title={title}
         titleTemplate={`%s | ${config.title}`}
@@ -135,7 +135,7 @@ const LandingPage = (props) => {
         }}
         noindex={disallowRobots}
       />
-      {content && <RenderSections sections={content} />}
+      {content && <RenderSections title={title} sections={content} />}
     </Layout>
   )
 }

@@ -13,31 +13,36 @@ function TeamSection(props) {
 
   return (
     <div className={styles.root}>
-      <section className="md:max-w-xl p-6 mx-auto space-y-4">
+      <section className="md:max-w-4xl p-6 mx-auto space-y-2">
         <div className={styles.label}>{label}</div>
-        <h2 className={`text-3xl font-serif {styles.heading}`}>{heading}</h2>
+        <h2 className={`max-w-3xl text-4xl font-serif {styles.heading}`}>{heading}</h2>
         {text && <SimpleBlockContent blocks={text} />}
         {teamMembers && (
           <div>
             <div className="container m-auto ">
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
+              <div className="">
                 {teamMembers.map((teamMember) => (
-                  <div className="relative p-1 pb-16  group bg-white bg-opacity-50 ">
-                    <div className="relative"></div>
+                  <div className="flex md:flex-row even:flex-row-reverse gap-6 relative p-1 pb-16  group bg-white bg-opacity-50 ">
                     <img
-                      src={builder.image(teamMember.image).auto('format').width(700).url()}
+                      src={builder.image(teamMember.image).auto('format').width(1000).url()}
                       loading="lazy"
                       width={700}
-                      className="h-64 w-full object-cover  grayscale hover:grayscale-0	  transition duration-500  "
+                      className=" w-1/2 object-cover  	  transition duration-500  "
                       alt={heading}
                     />
                     <div className="relative space-y-4  p-4">
                       <h4 className="text-2xl font-serif capitalize text-yellow-900">
                         {teamMember.fullName}
                       </h4>
-                      <p className="text-gray-600">
+                      <p>{teamMember.role}</p>
+
+                      <p>{teamMember.focusArea}</p>
+                      <p className="text-gray-600 text-base">
                         {teamMember.bio && <SimpleBlockContent blocks={teamMember.bio} />}{' '}
                       </p>
+                      <a href={teamMember.linkedin} className="underline text-yellow-800">
+                        Linkedin
+                      </a>
                     </div>
                   </div>
                 ))}

@@ -14,6 +14,11 @@ export default {
       title: 'Role'
     },
     {
+      name: 'focusArea',
+      type: 'string',
+      title: 'Focus Area'
+    },
+    {
       name: 'bio',
       type: 'portableText',
       title: 'Bio'
@@ -22,6 +27,11 @@ export default {
       name: 'image',
       type: 'figure',
       title: 'Image'
+    },
+    {
+      name: 'linkedin',
+      type: 'url',
+      title: 'Linkedin'
     }
   ],
 

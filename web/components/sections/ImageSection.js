@@ -32,6 +32,7 @@ function ImageSection(props) {
         <div className="md:w-1/2 p-12 flex-col  space-y-4">
           <div className="text-xs uppercase  ">{label}</div>
           <h2 className="text-3xl font-serif">{heading}</h2>
+          {popout && <SimpleBlockContent className="font-serif" blocks={popout} />}
           {text && <SimpleBlockContent className="font-serif" blocks={text} />}
 
           {cta && cta.route && <Cta {...cta} />}

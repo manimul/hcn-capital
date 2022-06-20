@@ -1,7 +1,10 @@
+import { TiersIcon } from '@sanity/icons'
+
 export default {
   type: 'object',
   name: 'portfolioSection',
   title: 'Portfolio Section',
+  icon: TiersIcon,
   fields: [
     {
       name: 'label',

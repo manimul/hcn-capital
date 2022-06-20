@@ -15,6 +15,7 @@ export default class MyDocument extends Document {
       <Html lang={this.props.lang || 'en'}>
         <Head />
         <body className="font-serif">
+          <p></p>
           <Main />
           <NextScript />
         </body>

@@ -13,68 +13,68 @@ function PortfolioSection(props) {
 
   return (
     <div>
-      <section className="mx-auto space-y-4 bg-gradient-to-br from-yellow-50 to-red-100">
-        <div className="md:max-w-4xl py-32 mx-auto">
+      <section className="mx-auto space-y-4 bg-gradient-to-br from-gray-50 to-yellow-50">
+        <div className="px-8 py-32 mx-auto">
           <div className="max-w-xl mx-auto text-center mb-12">
             <p className={styles.label}>{label}</p>
             <h2 className={`text-5xl font-serif mb-4  capitalize {styles.heading}`}>{heading}</h2>
             {text && <SimpleBlockContent blocks={text} />}
           </div>
+
           {portfolios && (
             <div>
-              <div className="container m-auto ">
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
+              <div className=" m-auto  ">
+                <div className="grid gap-1 sm:grid-cols-2 lg:grid-cols-2">
                   {portfolios.map((portfolio) => (
-                    <div className="relative p-1 pb-16  group bg-white bg-opacity-50 ">
+                    <div className="relative p-2   group bg-white bg-opacity-50   ">
                       <div className="relative">
                         <div
                           aria-hidden="true"
-                          className="absolute inset-x-0 bottom-0 h-64  bg-gradient-to-b from-white to-black"
+                          className=" group absolute inset-x-0 bottom-0 h-96 group-hover:backdrop-blur-lg  transition duration-200  cursor-pointer z-10 "
                         />
 
                         <img
                           src={builder.image(portfolio.image).auto('format').width(700).url()}
                           loading="lazy"
                           width={700}
-                          className="h-64 w-full object-cover  grayscale hover:grayscale-0	  transition duration-500  "
+                          className="h-96 w-full object-cover   transition duration-500  "
                           alt={heading}
                         />
-                        <div className="absolute text-white left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2">
+                        <div className="absolute  text-white left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 z-20">
                           <img
-                            src={builder.image(portfolio.logo).auto('format').width(200).url()}
+                            src={builder.image(portfolio.logo).auto('format').width(400).url()}
                             loading="lazy"
-                            className="text-white "
+                            className="text-white  "
                             alt={heading}
                           />
                         </div>
-                      </div>
-
-                      <a
-                        href={portfolio.slug.current}
-                        className="absolute inset-x-4 bottom-4 flex items-center space-x-2"
-                      >
-                        <div
-                          aria-hidden="true"
-                          className="h-10 w-10 flex border border-brown-200 rounded-full"
+                        <a
+                          href={portfolio.slug.current}
+                          className=" opacity-0 group-hover:opacity-100  transition duration-500 absolute inset-x-4 bottom-4 left-0 right-0 mx-auto w-36  flex items-center space-x-2 z-20"
                         >
-                          <svg
+                          <div
                             aria-hidden="true"
-                            width={24}
-                            height={24}
-                            fill="none"
-                            className="my-auto mx-auto flex-none text-brown-700"
+                            className="h-10 w-10 flex border border-brown-200 rounded-full"
                           >
-                            <path
-                              d="M10.75 8.75l3.5 3.25-3.5 3.25"
-                              stroke="currentColor"
-                              strokeWidth="1.5"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                        </div>
-                        <span className="text-yellow-600">See Portfolio</span>
-                      </a>
+                            <svg
+                              aria-hidden="true"
+                              width={24}
+                              height={24}
+                              fill="none"
+                              className="my-auto mx-auto flex-none text-white"
+                            >
+                              <path
+                                d="M10.75 8.75l3.5 3.25-3.5 3.25"
+                                stroke="currentColor"
+                                strokeWidth="1.5"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              />
+                            </svg>
+                          </div>
+                          <span className="text-white">See Portfolio</span>
+                        </a>
+                      </div>
                     </div>
                   ))}
                 </div>

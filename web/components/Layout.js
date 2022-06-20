@@ -37,6 +37,7 @@ Layout.propTypes = {
   children: PropTypes.arrayOf(PropTypes.node),
   config: PropTypes.shape({
     title: PropTypes.string,
+
     mainNavigation: PropTypes.arrayOf(PropTypes.object),
     footerNavigation: PropTypes.arrayOf(PropTypes.object),
     footerText: PropTypes.arrayOf(PropTypes.object),

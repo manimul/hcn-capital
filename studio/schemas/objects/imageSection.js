@@ -24,6 +24,11 @@ export default {
       title: 'Text'
     },
     {
+      name: 'popout',
+      type: 'simplePortableText',
+      title: 'Popout'
+    },
+    {
       name: 'image',
       type: 'figure',
       title: 'Image'

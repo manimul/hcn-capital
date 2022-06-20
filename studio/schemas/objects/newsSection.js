@@ -1,7 +1,11 @@
+import { InfoOutlineIcon } from '@sanity/icons'
+
 export default {
   type: 'object',
   name: 'newsSection',
   title: 'News Section',
+  icon: InfoOutlineIcon,
+
   fields: [
     {
       name: 'label',

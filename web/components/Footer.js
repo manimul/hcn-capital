@@ -9,7 +9,7 @@ import {getPathFromSlug, slugParamToPath} from '../utils/urls'
 function Footer(props) {
   const {navItems, text, router} = props
   return (
-    <div className={` text-white bg-slate-900 pb-12 {styles.root} pt-0`}>
+    <div className={` text-white bg-stone-900 pb-12 {styles.root} pt-0`}>
       <section className={`{[contact-section]   ${styles.gradient}  }`}>
         <div className="max-w-5xl  mx-auto flex  flex-col pt-32 pb-12 px-12 md:flex-row md:py-32 text-white md:space-x-16 ">
           <div className="md:w-1/2 space-y-4">
@@ -136,7 +136,7 @@ function Footer(props) {
         </div>
       </section>
 
-      <nav className="bg-slate-900 -mt-48 pt-56">
+      <nav className="bg-stone-900 -mt-48 pt-56">
         <ul className={`text-white ${styles.items}`}>
           {navItems &&
             navItems.map((item) => {
