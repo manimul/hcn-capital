@@ -25,7 +25,7 @@ export default {
     },
     {
       name: 'popout',
-      type: 'simplePortableText',
+      type: 'portableText',
       title: 'Popout'
     },
     {

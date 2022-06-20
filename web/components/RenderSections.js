@@ -16,7 +16,7 @@ function resolveSections(section) {
 }
 
 function RenderSections(props) {
-  const {sections} = props
+  const {sections, logo} = props
 
   if (!sections) {
     console.error('Missing section')
@@ -30,13 +30,14 @@ function RenderSections(props) {
         if (!SectionComponent) {
           return <div>Missing section {section._type}</div>
         }
-        return <SectionComponent {...section} key={section._key} />
+        return <SectionComponent {...section} key={section._key} logo={logo} />
       })}
     </Fragment>
   )
 }
 
 RenderSections.propTypes = {
+  logo: PropTypes.any,
   sections: PropTypes.arrayOf(
     PropTypes.shape({
       _type: PropTypes.string,

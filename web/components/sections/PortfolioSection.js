@@ -1,5 +1,4 @@
 import React from 'react'
-import groq from 'groq'
 import imageUrlBuilder from '@sanity/image-url'
 import client from '../../client'
 import PropTypes from 'prop-types'

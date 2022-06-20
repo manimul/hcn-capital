@@ -30,13 +30,13 @@ function TeamSection(props) {
                       className=" w-1/2 object-cover  	  transition duration-500  "
                       alt={heading}
                     />
-                    <div className="relative space-y-4  p-4">
+                    <div className="relative space-y-2  p-4">
                       <h4 className="text-2xl font-serif capitalize text-yellow-900">
                         {teamMember.fullName}
                       </h4>
-                      <p>{teamMember.role}</p>
+                      <p className="uppercase font-serif ">{teamMember.role}</p>
 
-                      <p>{teamMember.focusArea}</p>
+                      <p className=" font-bold ">{teamMember.focusArea}</p>
                       <p className="text-gray-600 text-base">
                         {teamMember.bio && <SimpleBlockContent blocks={teamMember.bio} />}{' '}
                       </p>

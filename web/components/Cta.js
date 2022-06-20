@@ -15,20 +15,27 @@ function cta(props) {
         }}
         as={`/${route.slug.current}`}
       >
-        <a className={styles.button}>{title}</a>
+        <a className={`hover:bg-white hover:text-gray-500 cursor-pointer  ${styles.button}`}>
+          {title}{' '}
+        </a>
       </Link>
     )
   }
 
   if (link) {
     return (
-      <a className={styles.button} href={link}>
+      <a
+        className={`hover:bg-white hover:text-gray-500 cursor-pointer ${styles.button}`}
+        href={link}
+      >
         {title}
       </a>
     )
   }
 
-  return <a className={styles.button}>{title}</a>
+  return (
+    <a className={`hover:bg-white hover:text-gray-500 cursor-pointer ${styles.button}`}>{title}</a>
+  )
 }
 
 cta.propTypes = {

@@ -3,15 +3,17 @@ import PropTypes from 'prop-types'
 import imageUrlBuilder from '@sanity/image-url'
 import styles from './Hero.module.css'
 import client from '../../client'
+
 import SimpleBlockContent from '../SimpleBlockContent'
 import Cta from '../Cta'
 
 function urlFor(source) {
   return imageUrlBuilder(client).image(source)
 }
+const builder = imageUrlBuilder(client)
 
 function Hero(props) {
-  const {heading, backgroundImage, secondImage, thirdImage, tagline, ctas} = props
+  const {heading, backgroundImage, secondImage, thirdImage, tagline, ctas, logo} = props
 
   const images = [backgroundImage, secondImage, thirdImage]
   const [imageItem, setImageItem] = React.useState(images[0]) // <-- seed initial state
@@ -44,7 +46,15 @@ function Hero(props) {
         <div
           className={`flex items-center h-96 bg-black bg-opacity-10 backdrop-blur-sm px-10 py-20 justify-center mt-48 ${styles.decoration} `}
         >
-          <h1 className="  text-3xl md:w-3/4  md:text-5xl font-serif   ">{heading}</h1>
+          {logo && (
+            <img
+              src={builder.image(logo).auto('format').width(400).url()}
+              loading="lazy"
+              className="text-white  md:w-1/2 p-12 "
+              alt={heading}
+            />
+          )}
+          {!logo && <h1 className="  text-3xl md:w-3/4  md:text-5xl font-serif   ">{heading}</h1>}
           <div className={`w-2/4 font-thin  text-base ${styles.tagline}`}>
             {tagline && <SimpleBlockContent blocks={tagline} />}
             {ctas && (
@@ -63,6 +73,7 @@ function Hero(props) {
 
 Hero.propTypes = {
   heading: PropTypes.string,
+  logo: PropTypes.object,
   backgroundImage: PropTypes.object,
   secondImage: PropTypes.object,
   thirdImage: PropTypes.object,

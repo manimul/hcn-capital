@@ -90,6 +90,7 @@ const builder = imageUrlBuilder(client)
 const LandingPage = (props) => {
   const {
     title = 'Missing title',
+    logo,
     description,
     disallowRobots,
     openGraphImage,
@@ -124,7 +125,7 @@ const LandingPage = (props) => {
     : []
 
   return (
-    <Layout config={config} title={title}>
+    <Layout config={config} title={title} logo={logo}>
       <NextSeo
         title={title}
         titleTemplate={`%s | ${config.title}`}
@@ -135,7 +136,7 @@ const LandingPage = (props) => {
         }}
         noindex={disallowRobots}
       />
-      {content && <RenderSections title={title} sections={content} />}
+      {content && <RenderSections title={title} sections={content} logo={logo} />}
     </Layout>
   )
 }
@@ -146,6 +147,7 @@ LandingPage.propTypes = {
   slug: PropTypes.string,
   disallowRobots: PropTypes.bool,
   openGraphImage: PropTypes.any,
+  logo: PropTypes.any,
   content: PropTypes.any,
   config: PropTypes.any,
 }
