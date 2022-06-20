@@ -22,7 +22,10 @@ function NewsSection(props) {
               <div className="container m-auto ">
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
                   {newsPosts.map((newsPost) => (
-                    <div className="relative p-1 pb-16  group bg-white bg-opacity-50 ">
+                    <div
+                      key={newsPost._id}
+                      className="relative p-1 pb-16  group bg-white bg-opacity-50 "
+                    >
                       <div className="relative"></div>
                       <img
                         src={builder

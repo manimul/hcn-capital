@@ -22,7 +22,10 @@ function TeamSection(props) {
             <div className="container m-auto ">
               <div className="">
                 {teamMembers.map((teamMember) => (
-                  <div className="flex md:flex-row even:flex-row-reverse gap-6 relative p-1 pb-16  group bg-white bg-opacity-50 ">
+                  <div
+                    key={teamMember._id}
+                    className="flex md:flex-row even:flex-row-reverse gap-6 relative p-1 pb-16  group bg-white bg-opacity-50 "
+                  >
                     <img
                       src={builder.image(teamMember.image).auto('format').width(1000).url()}
                       loading="lazy"

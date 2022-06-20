@@ -9,7 +9,7 @@ import Cta from '../Cta'
 const builder = imageUrlBuilder(client)
 
 function ImageSection(props) {
-  const {heading, alt, label, text, popout, image, cta, layout} = props
+  const {heading, label, text, popout, image, cta, layout} = props
 
   if (!image) {
     return null
@@ -26,7 +26,6 @@ function ImageSection(props) {
           <img
             src={builder.image(image).auto('format').width(2000).url()}
             className={`${styles.image}`}
-            alt={heading}
           />
         </div>
         <div className="md:w-1/2 p-12 flex-col  space-y-4">
@@ -54,7 +53,6 @@ function ImageSection(props) {
 ImageSection.propTypes = {
   heading: PropTypes.string,
   label: PropTypes.string,
-  alt: PropTypes.boolean,
   text: PropTypes.array,
   popout: PropTypes.array,
   layout: PropTypes.boolean,

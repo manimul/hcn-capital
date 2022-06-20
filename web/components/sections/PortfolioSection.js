@@ -25,7 +25,10 @@ function PortfolioSection(props) {
               <div className=" m-auto  ">
                 <div className="grid gap-1 sm:grid-cols-2 lg:grid-cols-2">
                   {portfolios.map((portfolio) => (
-                    <div className="relative p-2   group bg-white bg-opacity-50   ">
+                    <div
+                      key={portfolio._id}
+                      className="relative p-2   group bg-white bg-opacity-50   "
+                    >
                       <div className="relative">
                         <div
                           aria-hidden="true"

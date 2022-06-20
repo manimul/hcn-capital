@@ -14,7 +14,6 @@ const builder = imageUrlBuilder(client)
 
 function Hero(props) {
   const {heading, backgroundImage, secondImage, thirdImage, tagline, ctas, logo} = props
-
   const images = [backgroundImage, secondImage, thirdImage]
   const [imageItem, setImageItem] = React.useState(images[0]) // <-- seed initial state
   const [index, setIndex] = React.useState(0)
@@ -25,6 +24,7 @@ function Hero(props) {
       6000
     )
     return () => clearInterval(timerId)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   React.useEffect(() => {
@@ -73,6 +73,7 @@ function Hero(props) {
 
 Hero.propTypes = {
   heading: PropTypes.string,
+
   logo: PropTypes.object,
   backgroundImage: PropTypes.object,
   secondImage: PropTypes.object,
