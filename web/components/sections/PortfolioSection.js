@@ -4,11 +4,12 @@ import client from '../../client'
 import PropTypes from 'prop-types'
 import SimpleBlockContent from '../SimpleBlockContent'
 import styles from './TextSection.module.css'
+import Cta from '../Cta'
 
 const builder = imageUrlBuilder(client)
 
 function PortfolioSection(props) {
-  const {heading, label, text, portfolios} = props
+  const {heading, label, text, portfolios, cta} = props
 
   return (
     <div>
@@ -80,6 +81,12 @@ function PortfolioSection(props) {
                     </div>
                   ))}
                 </div>
+                {cta && cta.route && (
+                  <div className="mt-20 text-center w-72 mx-auto">
+                    {' '}
+                    <Cta className="mx-auto" {...cta} />
+                  </div>
+                )}
               </div>
             </div>
           )}
@@ -94,6 +101,7 @@ PortfolioSection.propTypes = {
   label: PropTypes.string,
   text: PropTypes.arrayOf(PropTypes.object),
   portfolios: PropTypes.arrayOf(PropTypes.object),
+  cta: PropTypes.object,
 }
 
 export default PortfolioSection

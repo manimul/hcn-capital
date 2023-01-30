@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import SimpleBlockContent from '../SimpleBlockContent'
 import client from '../../client'
+import Cta from '../Cta'
 
 import imageUrlBuilder from '@sanity/image-url'
 
@@ -9,7 +10,7 @@ import styles from './TextSection.module.css'
 const builder = imageUrlBuilder(client)
 
 function TeamSection(props) {
-  const {heading, label, text, teamMembers} = props
+  const {heading, label, text, teamMembers, cta} = props
 
   return (
     <div className={styles.root}>
@@ -30,7 +31,7 @@ function TeamSection(props) {
                       src={builder.image(teamMember.image).auto('format').width(1000).url()}
                       loading="lazy"
                       width={700}
-                      className=" w-1/2 object-cover  	  transition duration-500  "
+                      className=" md:w-1/2 md:object-cover  	  transition duration-500  "
                       alt={heading}
                     />
                     <div className="relative space-y-2  p-4">
@@ -50,6 +51,13 @@ function TeamSection(props) {
                   </div>
                 ))}
               </div>
+
+              {cta && cta.route && (
+                <div className="text-center w-72 mx-auto">
+                  {' '}
+                  <Cta className="mx-auto" {...cta} />
+                </div>
+              )}
             </div>
           </div>
         )}
@@ -63,6 +71,7 @@ TeamSection.propTypes = {
   label: PropTypes.string,
   text: PropTypes.arrayOf(PropTypes.object),
   teamMembers: PropTypes.arrayOf(PropTypes.object),
+  cta: PropTypes.object,
 }
 
 export default TeamSection

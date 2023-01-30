@@ -33,6 +33,11 @@ export default {
           }
         }
       ]
+    },
+    {
+      name: 'cta',
+      type: 'cta',
+      title: 'Call to action'
     }
   ],
   preview: {

@@ -1,4 +1,4 @@
-@import "../../styles/custom-media.css";
+@import '../../styles/custom-media.css';
 
 .root {
   position: relative;
@@ -70,4 +70,10 @@
   @media (--media-min-medium) {
     max-width: calc((var(--width-small) / 2) - 3rem);
   }
+}
+
+.root li {
+  list-style: disc;
+  margin-bottom: 1em;
+  margin-left: 1em;
 }

@@ -15,7 +15,9 @@ function cta(props) {
         }}
         as={`/${route.slug.current}`}
       >
-        <a className={`hover:bg-white hover:text-gray-500 cursor-pointer  ${styles.button}`}>
+        <a
+          className={`hover:bg-white hover:text-gray-500 cursor-pointer transition delay-150  ${styles.button}`}
+        >
           {title}{' '}
         </a>
       </Link>
@@ -25,7 +27,7 @@ function cta(props) {
   if (link) {
     return (
       <a
-        className={`hover:bg-white hover:text-gray-500 cursor-pointer ${styles.button}`}
+        className={`hover:bg-white hover:text-gray-500 cursor-pointer transition delay-150 ${styles.button}`}
         href={link}
       >
         {title}
@@ -34,7 +36,11 @@ function cta(props) {
   }
 
   return (
-    <a className={`hover:bg-white hover:text-gray-500 cursor-pointer ${styles.button}`}>{title}</a>
+    <a
+      className={`hover:bg-white hover:text-gray-500 transition delay-150 cursor-pointer ${styles.button}`}
+    >
+      {title}
+    </a>
   )
 }
 
