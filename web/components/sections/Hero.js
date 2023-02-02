@@ -41,29 +41,31 @@ function Hero(props) {
       : {backgroundImage: `url("${urlFor(backgroundImage).width(2000).auto('format').url()}")`}
 
   return (
-    <div className={`${styles.root}`} style={style}>
-      <div className={`min-h-screen   p-4 md:max-w-5xl mx-auto z-10 `}>
-        <div
-          className={`flex items-center h-96 bg-black bg-opacity-10 backdrop-blur-sm px-10 py-20 justify-center mt-48 ${styles.decoration} `}
-        >
-          {logo && (
-            <img
-              src={builder.image(logo).auto('format').width(400).url()}
-              loading="lazy"
-              className="text-white  md:w-1/2 p-12 "
-              alt={heading}
-            />
-          )}
-          {!logo && <h1 className="  text-3xl md:w-3/4  md:text-5xl font-serif   ">{heading}</h1>}
-          <div className={`w-2/4 font-thin  text-base ${styles.tagline}`}>
-            {tagline && <SimpleBlockContent blocks={tagline} />}
-            {ctas && (
-              <div className={styles.ctas}>
-                {ctas.map((cta) => (
-                  <Cta {...cta} key={cta._key} />
-                ))}
-              </div>
+    <div className={`  ${styles.root}`} style={style}>
+      <div className={`backdrop-brightness-50 w-full pb-12 pt-8 `}>
+        <div className={`min-h-screen flex   p-4 container mx-auto    z-10 `}>
+          <div
+            className={`flex md:flex-row flex-col items-center  justify-center my-auto align-middle ${styles.decoration} `}
+          >
+            {logo && (
+              <img
+                src={builder.image(logo).auto('format').width(400).url()}
+                loading="lazy"
+                className="text-white  md:w-1/2 p-12 "
+                alt={heading}
+              />
             )}
+            {!logo && <h1 className="px-10 py-16   text-3xl md:w-3/4  md:text-7xl  ">{heading}</h1>}
+            <div className={`w-2/4   font-medium text-2xl opacity-70   ${styles.tagline}`}>
+              {tagline && <SimpleBlockContent blocks={tagline} />}
+              {ctas && (
+                <div className={styles.ctas}>
+                  {ctas.map((cta) => (
+                    <Cta {...cta} key={cta._key} />
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

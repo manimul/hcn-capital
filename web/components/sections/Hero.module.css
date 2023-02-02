@@ -8,11 +8,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  padding-bottom: 2rem;
-
-  @media (--media-min-medium) {
-    padding-bottom: 4rem;
-  }
 }
 
 .root::before {

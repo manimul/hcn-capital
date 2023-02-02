@@ -60,7 +60,7 @@ class Header extends Component {
     }
 
     if (logo.asset.extension === 'svg') {
-      return <SVG src={logo.asset.url} className={styles.logo} />
+      return <SVG src={logo.asset.url} className={'block w-12'} />
     }
 
     return <img src={logo.asset.url} alt={logo.title} className={styles.logo} />
@@ -71,13 +71,15 @@ class Header extends Component {
     const {showNav} = this.state
 
     return (
-      <div className={`z-20 w-screen mx-auto  ${styles.root}`} data-show-nav={showNav}>
+      <div className={`z-20 w-screen mx-auto container ${styles.root}`} data-show-nav={showNav}>
         <h1 className={` text-white  ${styles.branding}`}>
           <Link href={'/'}>
-            <a title={title}>{this.renderLogo(logo)}</a>
+            <a className="" title={title}>
+              {this.renderLogo(logo)}
+            </a>
           </Link>
         </h1>
-        <nav className={`font-serif text-white ${styles.nav}`}>
+        <nav className={`  text-white mt-5 ${styles.nav}`}>
           <ul className={styles.navItems}>
             {navItems &&
               navItems.map((item) => {
@@ -86,7 +88,11 @@ class Header extends Component {
                 return (
                   <li key={_id} className={styles.navItem}>
                     <Link href={getPathFromSlug(slug.current)}>
-                      <a data-is-active={isActive ? 'true' : 'false'} aria-current={isActive}>
+                      <a
+                        className="text-lg"
+                        data-is-active={isActive ? 'true' : 'false'}
+                        aria-current={isActive}
+                      >
                         {title}
                       </a>
                     </Link>

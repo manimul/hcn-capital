@@ -16,7 +16,7 @@ function cta(props) {
         as={`/${route.slug.current}`}
       >
         <a
-          className={`hover:bg-white hover:text-gray-500 cursor-pointer transition delay-150  ${styles.button}`}
+          className={`hover:bg-white hover:text-gray-500  backdrop-blur-xl cursor-pointer uppercase text-lg transition tracking-wider ease-in-out  ${styles.button}`}
         >
           {title}{' '}
         </a>
@@ -27,7 +27,7 @@ function cta(props) {
   if (link) {
     return (
       <a
-        className={`hover:bg-white hover:text-gray-500 cursor-pointer transition delay-150 ${styles.button}`}
+        className={`hover:bg-white hover:text-gray-500  backdrop-blur-xl cursor-pointer uppercase text-lg transition tracking-wider ease-in-out  ${styles.button}`}
         href={link}
       >
         {title}

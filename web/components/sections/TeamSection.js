@@ -14,9 +14,9 @@ function TeamSection(props) {
 
   return (
     <div className={styles.root}>
-      <section className="md:max-w-4xl p-6 mx-auto space-y-2">
-        <div className={styles.label}>{label}</div>
-        <h2 className={`max-w-3xl text-4xl font-serif {styles.heading}`}>{heading}</h2>
+      <section className="md:max-w-6xl p-6 mx-auto space-y-2">
+        <div className={'opacity-50 text-base  uppercase tracking-wide'}>{label}</div>
+        <h2 className={`max-w-3xl text-5xl font-medium tracking-tight`}>{heading}</h2>
         {text && <SimpleBlockContent blocks={text} />}
         {teamMembers && (
           <div>
@@ -35,10 +35,10 @@ function TeamSection(props) {
                       alt={heading}
                     />
                     <div className="relative space-y-2  p-4">
-                      <h4 className="text-2xl font-serif capitalize text-yellow-900">
+                      <h4 className="text-3xl  font-sans capitalize font-medium text-black opacity-75">
                         {teamMember.fullName}
                       </h4>
-                      <p className="uppercase font-serif ">{teamMember.role}</p>
+                      <p className="uppercase  font-sans ">{teamMember.role}</p>
 
                       <p className=" font-bold ">{teamMember.focusArea}</p>
                       <p className="text-gray-600 text-base">
