@@ -9,4 +9,5 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  safelist: ['backdrop-brightness-50', 'backdrop-blur-lg', 'group-hover:backdrop-blur-lg'],
 }
