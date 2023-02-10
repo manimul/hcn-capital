@@ -13,7 +13,7 @@ function NewsSection(props) {
   return (
     <div>
       <section className="mx-auto space-y-4 bg-gradient-to-br from-yellow-50 to-orange-50">
-        <div className="md:max-w-4xl py-32 mx-auto">
+        <div className="md:max-w-4xl px-8 py-32 mx-auto">
           <div className={styles.label}>{label}</div>
           <h2 className={`text-4xl  font-sans mb-12 {styles.heading}`}>{heading}</h2>
           {text && <SimpleBlockContent blocks={text} />}

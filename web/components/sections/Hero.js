@@ -55,8 +55,10 @@ function Hero(props) {
                 alt={heading}
               />
             )}
-            {!logo && <h1 className="px-10 py-16   text-3xl md:w-3/4  md:text-7xl  ">{heading}</h1>}
-            <div className={`w-2/4   font-medium text-2xl opacity-70   ${styles.tagline}`}>
+            {!logo && (
+              <h1 className="md:px-10 md:py-16   text-3xl md:w-3/4  md:text-7xl  ">{heading}</h1>
+            )}
+            <div className={`md:w-2/4   font-medium md:text-2xl opacity-70   ${styles.tagline}`}>
               {tagline && <SimpleBlockContent blocks={tagline} />}
               {ctas && (
                 <div className={styles.ctas}>

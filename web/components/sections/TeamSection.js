@@ -25,7 +25,7 @@ function TeamSection(props) {
                 {teamMembers.map((teamMember) => (
                   <div
                     key={teamMember._id}
-                    className="flex md:flex-row even:flex-row-reverse gap-6 relative p-1 pb-16  group bg-white bg-opacity-50 "
+                    className=" flex md:flex-row flex-col  md:even:flex-row-reverse gap-6 relative p-1 pb-16  group bg-white bg-opacity-50 "
                   >
                     <img
                       src={builder.image(teamMember.image).auto('format').width(1000).url()}

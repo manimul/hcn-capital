@@ -71,7 +71,10 @@ class Header extends Component {
     const {showNav} = this.state
 
     return (
-      <div className={`z-20 w-screen mx-auto container ${styles.root}`} data-show-nav={showNav}>
+      <div
+        className={`z-20 px-4 w-screen mx-auto container ${styles.root}`}
+        data-show-nav={showNav}
+      >
         <h1 className={` text-white  ${styles.branding}`}>
           <Link href={'/'}>
             <a className="" title={title}>

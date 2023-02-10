@@ -12,9 +12,9 @@ function Footer(props) {
     <div
       className={` text-white bg-gradient-to-b from-slate-900 via-black to-slate-900 pb-12 {styles.root} pt-0`}
     >
-      <section className={`{[contact-section]   ${styles.gradient}  }`}>
-        <div className="container  mx-auto flex   flex-col pb-12 px-12 md:flex-row md:py-52 text-white md:space-x-16 ">
-          <div className="md:w-3/4 space-y-4  ">
+      <section className={`{[contact-section]  md:p-12   ${styles.gradient}  }`}>
+        <div className="container  mx-auto flex   flex-col pb-12 px-12 md:flex-row  py-16 md:py-52 text-white space-y-16 md:space-x-16 ">
+          <div className="md:w-3/4 space-y-4   ">
             {' '}
             <h2 className="text-base uppercase text-[#E8B127]">Contact Us</h2>
             <h3 className="text-4xl text-white  font-sans">Get in touch today </h3>
