@@ -9,7 +9,11 @@ module.exports = {
     './components/*.js',
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        '3xl': '0 20px 100px 15px rgba(133, 135, 127, 0.4)',
+      },
+    },
   },
   plugins: [],
 }

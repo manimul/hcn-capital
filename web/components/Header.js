@@ -83,7 +83,7 @@ class Header extends Component {
           </Link>
         </h1>
         <nav className={`  text-white mt-5 ${styles.nav}`}>
-          <ul className={styles.navItems}>
+          <ul className={` ${styles.navItems}`}>
             {navItems &&
               navItems.map((item) => {
                 const {slug, title, _id} = item

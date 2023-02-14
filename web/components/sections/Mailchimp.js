@@ -8,9 +8,9 @@ export default function Mailchimp(props) {
 
   return (
     <section className={` ${styles.root}`}>
-      <div className={` ${styles.container}`}>
-        <h2 className={` font-sans text-4xl  ${styles.heading} `}>{heading}</h2>
-        <p className={styles.subtitle}>{subtitle}</p>
+      <div className={`text-center space-y-4 ${styles.container}`}>
+        <h2 className="[heading] text-3xl md:text-5xl font-medium tracking-tight">{heading}</h2>{' '}
+        <p className="[text-body] md:text-xl">{subtitle}</p>
         {actionUrl && (
           <MailchimpForm
             action={actionUrl}

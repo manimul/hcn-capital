@@ -22,7 +22,7 @@ function Layout(props) {
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover" />
       </Head>
-      <div className="containerOriginal">
+      <div className="containerOriginal bg-gradient-to-b from-white via-[#d9e8eb] to-[#f5ebe0]">
         <Header title={title} navItems={mainNavigation} logo={logo} />
 
         <div className="-mt-40  content">{children}</div>

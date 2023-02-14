@@ -31,8 +31,7 @@ function Hero(props) {
     setImageItem(images[index]) // <-- update media state when index updates
   }, [index])
 
-  console.log(imageItem)
-
+  /*
   const style =
     backgroundImage && secondImage && thirdImage
       ? {
@@ -40,12 +39,18 @@ function Hero(props) {
         }
       : {backgroundImage: `url("${urlFor(backgroundImage).width(2000).auto('format').url()}")`}
 
+      */
+
+  const style = {
+    backgroundImage: `url("${urlFor(backgroundImage).width(2000).auto('format').url()}")`,
+  }
+
   return (
     <div className={`  ${styles.root}`} style={style}>
-      <div className={`backdrop-brightness-50 w-full pb-12 pt-8 `}>
+      <div className={`backdrop-brightness-50   w-full  pb-12 pt-8 `}>
         <div className={`min-h-screen flex   p-4 container mx-auto    z-10 `}>
           <div
-            className={`flex md:flex-row flex-col items-center  justify-center my-auto align-middle ${styles.decoration} `}
+            className={`  flex md:flex-row flex-col items-center  justify-center my-auto align-middle ${styles.decoration} `}
           >
             {logo && (
               <img
@@ -56,9 +61,9 @@ function Hero(props) {
               />
             )}
             {!logo && (
-              <h1 className="md:px-10 md:py-16   text-3xl md:w-3/4  md:text-7xl  ">{heading}</h1>
+              <h1 className="md:px-10 md:py-16    text-3xl md:w-3/4  md:text-7xl  ">{heading}</h1>
             )}
-            <div className={`md:w-2/4   font-medium md:text-2xl opacity-70   ${styles.tagline}`}>
+            <div className={`md:w-2/4   font-medium md:text-2xl opacity-100   ${styles.tagline}`}>
               {tagline && <SimpleBlockContent blocks={tagline} />}
               {ctas && (
                 <div className={styles.ctas}>

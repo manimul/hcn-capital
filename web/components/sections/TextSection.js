@@ -8,10 +8,10 @@ function TextSection(props) {
 
   return (
     <div id="about" className={styles.root}>
-      <section className="md:max-w-3xl p-6 mx-auto space-y-4">
-        <div className={styles.label}>{label}</div>
-        <h2 className={`text-3xl  font-sans `}>{heading}</h2>
-        <div className="text first-letter:text-2xl">
+      <section className="md:max-w-4xl p-6 mx-auto space-y-4">
+        <div className="[label] opacity-50 text-base  uppercase tracking-wide   ">{label}</div>
+        <h2 className="[heading] text-3xl md:text-5xl font-medium tracking-tight">{heading}</h2>
+        <div className="[text-body] md:text-xl ">
           {text && <SimpleBlockContent blocks={text} />}
         </div>
       </section>

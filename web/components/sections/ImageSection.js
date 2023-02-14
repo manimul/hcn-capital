@@ -30,16 +30,16 @@ function ImageSection(props) {
         </div>
         <div className="md:w-1/2 p-12 flex-col  space-y-4">
           <div className="opacity-50 text-base  uppercase tracking-wide   ">{label}</div>
-          <h2 className="text-5xl font-medium tracking-tight  ">{heading}</h2>
+          <h2 className="text-3xl md:text-5xl font-medium tracking-tight  ">{heading}</h2>
           {popout && (
-            <div className="font-bold text-xl   py-6   ">
+            <div className="font-italic text-2xl   py-6   ">
               <p className=" ">
                 {' '}
                 <SimpleBlockContent blocks={popout} />
               </p>
             </div>
           )}
-          <div className="">
+          <div className="md:text-xl">
             {text && <SimpleBlockContent className=" font-sans " blocks={text} />}
           </div>
 

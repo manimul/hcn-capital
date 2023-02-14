@@ -15,7 +15,6 @@
 
 .item {
   @nest & > a {
-    display: block;
     text-decoration: none;
     color: inherit;
     padding: 1.5rem 0.5rem;

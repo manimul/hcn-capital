@@ -12,19 +12,22 @@ function NewsSection(props) {
 
   return (
     <div>
-      <section className="mx-auto space-y-4 bg-gradient-to-br from-yellow-50 to-orange-50">
-        <div className="md:max-w-4xl px-8 py-32 mx-auto">
-          <div className={styles.label}>{label}</div>
-          <h2 className={`text-4xl  font-sans mb-12 {styles.heading}`}>{heading}</h2>
+      <section className="mx-auto space-y-4  ">
+        <div className="md:max-w-7xl px-8 py-24 mx-auto">
+          <div className="text-center  mx-auto mb-4">
+            <div className={styles.label}>{label}</div>
+            <h2 className={`text-3xl  md:text-5xl font-medium tracking-tight `}>{heading}</h2>
+          </div>
+
           {text && <SimpleBlockContent blocks={text} />}
           {newsPosts && (
             <div>
-              <div className="container m-auto ">
+              <div className="container m-auto  ">
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
                   {newsPosts.map((newsPost) => (
                     <div
                       key={newsPost._id}
-                      className="relative p-1 pb-16  group bg-white bg-opacity-50 "
+                      className="relative p-2 pb-16  group bg-white bg-opacity-50 shadow-3xl rounded-2xl    "
                     >
                       <div className="relative"></div>
                       <img
@@ -35,14 +38,14 @@ function NewsSection(props) {
                           .url()}
                         loading="lazy"
                         width={700}
-                        className="h-64 w-full object-cover  grayscale hover:grayscale-0	  transition duration-500  "
+                        className="h-64 w-full object-cover  rounded-t-lg   transition duration-500  "
                         alt={heading}
                       />
                       <div className="relative space-y-4  p-4">
-                        <h4 className="text-2xl  font-sans capitalize text-yellow-900">
+                        <h4 className="text-2xl  font-bold opacity-75 capitalize ">
                           {newsPost.title}
                         </h4>
-                        <p className="text-gray-600">
+                        <p className="">
                           {newsPost.excerpt && <SimpleBlockContent blocks={newsPost.excerpt} />}{' '}
                         </p>
                       </div>
