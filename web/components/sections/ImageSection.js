@@ -39,7 +39,7 @@ function ImageSection(props) {
               </p>
             </div>
           )}
-          <div className="md:text-xl">
+          <div className="md:text-xl space-y-6">
             {text && <SimpleBlockContent className=" font-sans " blocks={text} />}
           </div>
 

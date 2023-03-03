@@ -50,13 +50,13 @@ function Hero(props) {
       <div className={`backdrop-brightness-50   w-full  pb-12 pt-8 `}>
         <div className={`min-h-screen flex   p-4 container mx-auto    z-10 `}>
           <div
-            className={`  flex md:flex-row flex-col items-center  justify-center my-auto align-middle ${styles.decoration} `}
+            className={`  flex md:flex-row flex-col items-center  min-w-full justify-center my-auto align-middle ${styles.decoration} `}
           >
             {logo && (
               <img
                 src={builder.image(logo).auto('format').width(400).url()}
                 loading="lazy"
-                className="text-white  md:w-1/2 p-12 "
+                className="text-white  md:w-1/2 p-12 max-w-sm "
                 alt={heading}
               />
             )}

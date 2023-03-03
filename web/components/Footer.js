@@ -145,7 +145,7 @@ function Footer(props) {
                   name="message"
                   className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500  "
                 ></textarea>
-                <button className="mt-8 text-[#AAC29E]  bg-none border-2  border-[#AAC29E]  py-5  inline-block tracking-wide  font-sans font-bold uppercase  ">
+                <button className="mt-8 text-[#AAC29E]  bg-none border-2  border-[#AAC29E] hover:bg-[#AAC29E] hover:text-white  py-5  inline-block tracking-wide  font-sans font-bold uppercase  ">
                   Skicka meddelande{' '}
                 </button>
               </fieldset>

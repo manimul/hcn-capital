@@ -20,14 +20,15 @@ function NewsSection(props) {
           </div>
 
           {text && <SimpleBlockContent blocks={text} />}
+
           {newsPosts && (
             <div>
               <div className="container m-auto  ">
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
+                <div className="grid gap-8 sm:grid-cols-2 mt-7 lg:grid-cols-2">
                   {newsPosts.map((newsPost) => (
                     <div
                       key={newsPost._id}
-                      className="relative p-2 pb-16  group bg-white bg-opacity-50 shadow-3xl rounded-2xl    "
+                      className="relative p-2  pb-16  group hover:bg-white hover:-translate-y-2 ease-in-out transition-all delay-50 duration-500  cursor-pointer  "
                     >
                       <div className="relative"></div>
                       <img
@@ -38,7 +39,7 @@ function NewsSection(props) {
                           .url()}
                         loading="lazy"
                         width={700}
-                        className="h-64 w-full object-cover  rounded-t-lg   transition duration-500  "
+                        className="h-64 w-full object-cover   transition duration-500  "
                         alt={heading}
                       />
                       <div className="relative space-y-4  p-4">
@@ -51,18 +52,18 @@ function NewsSection(props) {
                       </div>
                       <a
                         href={newsPost.slug.current}
-                        className="absolute inset-x-4 bottom-4 flex items-center space-x-2"
+                        className="absolute group-hover:translate-x-2 group-hover:opacity-80 opacity-40 ease-in-out transition-all delay-100 duration-500   inset-x-4 bottom-4 flex items-center space-x-2"
                       >
                         <div
                           aria-hidden="true"
-                          className="h-10 w-10 flex border border-yellow-200 rounded-full"
+                          className="h-10 w-10 flex border border-slate-800 rounded-full"
                         >
                           <svg
                             aria-hidden="true"
                             width={24}
                             height={24}
                             fill="none"
-                            className="my-auto mx-auto flex-none text-yellow-700"
+                            className="my-auto mx-auto flex-none text-slate-800 "
                           >
                             <path
                               d="M10.75 8.75l3.5 3.25-3.5 3.25"
@@ -73,7 +74,7 @@ function NewsSection(props) {
                             />
                           </svg>
                         </div>
-                        <span className="text-yellow-600">Read more</span>
+                        <span className="text-slate-800 font-medium">Read more</span>
                       </a>
                     </div>
                   ))}

@@ -37,7 +37,7 @@ function cta(props) {
 
   return (
     <a
-      className={`hover:bg-white hover:text-gray-500 transition delay-150 cursor-pointer ${styles.button}`}
+      className={`hover:bg-white hover:text-gray-500  backdrop-blur-xl cursor-pointer uppercase text-lg transition tracking-wider ease-in-out ${styles.button}`}
     >
       {title}
     </a>
