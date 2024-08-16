@@ -13,7 +13,7 @@ function PortfolioSection(props) {
 
   return (
     <div>
-      <section className="mx-auto space-y-4 ">
+      <section id="portfolio" className="mx-auto space-y-4 ">
         <div className="px-8 py-32 mx-auto max-w-7xl">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <p className="text-base  uppercase tracking-wide opacity-50 ">{label}</p>

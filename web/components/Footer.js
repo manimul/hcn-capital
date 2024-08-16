@@ -154,7 +154,22 @@ function Footer(props) {
         </div>
       </section> */}
 
-      <nav className="bg-white bg-opacity-25 py-24">
+      <nav className="bg-white bg-opacity-25 py-4">
+        {text &&
+          text.map((block) => {
+            if (block._type === 'block') {
+              return (
+                <p
+                  key={block._key}
+                  className={`${block.style} text-sm uppercase text-center font-bold`}
+                >
+                  {block.children.map((child) => child.text).join(' ')}
+                </p>
+              )
+            }
+            return null
+          })}
+
         <ul className={`${styles.items}`}>
           {navItems &&
             navItems.map((item) => {
