@@ -10,7 +10,7 @@ function Footer(props) {
   const {navItems, text, router} = props
   return (
     <div className={`  `}>
-      <section className={`{[contact-section]  md:p-12    ${styles.gradient}  }`}>
+      {/* <section className={`{[contact-section]  md:p-12    ${styles.gradient}  }`}>
         <div className="container  mx-auto flex   flex-col py-24 px-8 md:px-12 md:flex-row   md:space-x-16 ">
           <div className="md:w-3/4 space-y-4 mb-12  ">
             {' '}
@@ -152,7 +152,7 @@ function Footer(props) {
             </form>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <nav className="bg-white bg-opacity-25 py-24">
         <ul className={`${styles.items}`}>
